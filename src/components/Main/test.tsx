@@ -1,20 +1,20 @@
-import { screen, render } from '@testing-library/react'
+import { screen, render } from "@testing-library/react";
 
-import Main from '.'
+import Main from ".";
 
-describe('<Main />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Main />)
+describe("<Main />", () => {
+  it("should render the heading", () => {
+    const { container } = render(<Main />);
 
     expect(
-      screen.getByRole('heading', { name: /react avançado/i })
-    ).toBeInTheDocument()
-    expect(container.firstChild).toMatchSnapshot()
-  })
+      screen.getByRole("heading", { name: /react avançado/i })
+    ).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot();
+  });
 
-  it('should be render colors correctly', () => {
-    const { container } = render(<Main />)
+  it("should be render colors correctly", () => {
+    const { container } = render(<Main />);
 
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
-  })
-})
+    expect(container.firstChild).toHaveStyle({ "background-color": "#06092b" });
+  });
+});
